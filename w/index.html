@@ -1,0 +1,28 @@
+<html>
+	<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="p5.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+		<script src="index.js"></script>
+
+    <div id="screen1">
+      <h1>Welcome to Meet With Pong!</h1>
+      <p>With Meet With Pong, you will be given the opportunity to meet new people while playing a friendly game of pong! Just enter some basic information about yourself and hit either "Join Live" to play with real random players or hit About Me to play a game against a bot and learn about me, the creator of this experience. The game ends when both players reveal everything about the other player.</p>
+
+      <h2>Get Started</h2>
+      <a>Name: </a><input type="text" id="name" placeholder="Mr. Name Here"/><br/>
+      <a>Favorite Programming Language: </a><input type="text" id="language" placeholder="C#"/><br/>
+      <a>Type of School/Occupation: </a><input type="text" id="occupation" placeholder="College Student"/><br/>
+      <a>Favorite Food: </a><input type="text" id="food" placeholder="Pizza"/><br/>
+      <a>Favorite Game: </a><input type="text" id="game" placeholder="Minecraft"/><br/>
+      <input type="button" value="Join Live" onclick="joinGame(true)"/><input type="button" value="About Me (bot)" onclick="joinGame(false)"/><br/>
+      <a id="inQueue" style="display: none">Waiting in queue...</a><br/>
+      <a id="notFilled" style="display: none">You must fill out all of the information. Say it if you don't want to reveal something about yourself.</a>
+    </div>
+    <div id="screen2" style="display: none">
+    </div>
+	</body>
+</html>
